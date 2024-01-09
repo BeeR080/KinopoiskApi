@@ -33,7 +33,7 @@ class MovieViewModel @Inject constructor(
             getMovieUseCase.invoke().collect{movie->
                 when(movie){
                     is NetworkResult.Success->{
-                        _uiState.value = MovieUiState(data = movie.data)
+                        _uiState.value = MovieUiState(data = movie.data?.docs)
                     }
                     is NetworkResult.Error->{
                         _uiState.value = MovieUiState(error = movie.message)

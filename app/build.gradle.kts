@@ -85,6 +85,8 @@ dependencies {
     implementation ("com.google.dagger:hilt-android:2.44")
     kapt ("com.google.dagger:hilt-compiler:2.44")
 
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     //OkHttp
     implementation ("com.squareup.okhttp3:okhttp:4.1.0")
