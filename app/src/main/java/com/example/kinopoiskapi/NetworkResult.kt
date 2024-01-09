@@ -1,5 +1,6 @@
 package com.example.kinopoiskapi
 
+import android.util.Log
 import retrofit2.HttpException
 import retrofit2.Response
 
@@ -43,7 +44,6 @@ suspend fun <T>safeResponse(response: suspend()->Response<T>):NetworkResult<T>{
         if (response.isSuccessful){
 
             val body = response.body()
-
             NetworkResult.Success(data = body)
 
         }else{

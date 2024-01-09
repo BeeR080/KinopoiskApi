@@ -1,5 +1,6 @@
 package com.example.kinopoiskapi.data.repository
 
+import android.util.Log
 import com.example.kinopoiskapi.NetworkResult
 import com.example.kinopoiskapi.data.RemoteDataSource
 import com.example.kinopoiskapi.domain.model.Movie

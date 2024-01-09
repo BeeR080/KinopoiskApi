@@ -1,5 +1,6 @@
 package com.example.kinopoiskapi.domain.usecases
 
+
 import com.example.kinopoiskapi.NetworkResult
 import com.example.kinopoiskapi.domain.model.Movie
 import com.example.kinopoiskapi.domain.repository.MovieRepository
