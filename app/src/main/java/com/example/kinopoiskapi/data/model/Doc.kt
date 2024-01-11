@@ -1,5 +1,8 @@
 package com.example.kinopoiskapi.data.model
 
+import com.example.kinopoiskapi.domain.model.Movie
+import com.example.kinopoiskapi.presentation.model.MovieUI
+
 data class Doc(
     val ageRating: Int,
     val alternativeName: String,
@@ -18,7 +21,7 @@ data class Doc(
     val imagesInfo: ImagesInfo,
     val isSeries: Boolean,
     val lists: List<String>,
-    val logo: Logo,
+    val logo: Logo?,
     val movieLength: Int,
     val name: String,
     val names: List<Name>,
@@ -48,5 +51,17 @@ data class Doc(
     val votes: Votes,
     val watchability: Watchability,
     val year: Int
-)
+){
+
+    fun toMovieUi():MovieUI{
+
+        return MovieUI(
+            name = name,
+            imageUrl = backdrop.url,
+            imageLogoUrl = logo?.url
+        )
+
+    }
+}
+
 

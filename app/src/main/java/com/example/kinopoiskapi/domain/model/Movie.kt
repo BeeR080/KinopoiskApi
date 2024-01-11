@@ -2,6 +2,8 @@ package com.example.kinopoiskapi.domain.model
 
 import com.example.kinopoiskapi.data.model.Doc
 
+import com.example.kinopoiskapi.presentation.model.MovieUI
+
 
 data class Movie(
     val docs: List<Doc>,
@@ -11,10 +13,7 @@ data class Movie(
     val total: Int
 ){
 
-    fun toMovieUi():List<Doc>{
 
-        return docs
-    }
 
 }
 

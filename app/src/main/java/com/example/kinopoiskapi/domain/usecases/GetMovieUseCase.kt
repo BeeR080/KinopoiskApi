@@ -15,4 +15,6 @@ class GetMovieUseCase @Inject constructor(private val repository: MovieRepositor
         emit(movie)
     }
 
+    fun invokePaging() = repository.getMoviesPaging()
+
 }

@@ -1,15 +1,12 @@
 package com.example.kinopoiskapi.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.kinopoiskapi.MovieUiState
-import com.example.kinopoiskapi.NetworkResult
 
 import com.example.kinopoiskapi.domain.usecases.GetMovieUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -22,13 +19,18 @@ class MovieViewModel @Inject constructor(
 
 
 
+
+
     init {
 
+       // getMovies()
         getMovies()
 
     }
+    fun getMovies() = getMovieUseCase.invokePaging()
 
-    fun getMovies(){
+
+ /*   fun getMovies(){
         viewModelScope.launch {
             getMovieUseCase.invoke().collect{movie->
                 when(movie){
@@ -49,7 +51,7 @@ class MovieViewModel @Inject constructor(
 
             }
         }
-    }
+    }*/
 
 
 
